@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<body>
+	<div class="container">
+		<h1>update product</h1>
+		<form action="#" th:action="@{/product/productsaved}" method="post"
+			th:object="${product}">
+			
+			<input type="hidden" th:field="*{id}">
+
+			<input type="text" th:field="*{category}" 
+			
+				class="form-control mb-4 col-4"> 
+				
+				<input type="text"
+				th:field="*{company}" 
+				class="form-control mb-4 col-4"> 
+				
+				<input
+				type="number" th:field="*{size}"
+				
+				class="form-control mb-4 col-4"> 
+				
+				
+				<input type="number"
+				th:field="*{price}" 
+				
+				class="form-control mb-4 col-4">
+			<button type="submit" class="btn btn-info col-2">update </button>
+		</form>
+	</div>
+
+</body>
+</html>
